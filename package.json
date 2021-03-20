@@ -6,10 +6,13 @@
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
+    "run": "ionic cap run android --livereload --external",
     "build": "ng build",
+    "prod": "ng build --prod",
     "test": "ng test",
     "lint": "ng lint",
-    "e2e": "ng e2e"
+    "e2e": "ng e2e",
+    "publish_to_device": "ionic cap run android --prod --device"
   },
   "private": true,
   "dependencies": {
@@ -19,8 +22,11 @@
     "@angular/platform-browser": "~11.2.0",
     "@angular/platform-browser-dynamic": "~11.2.0",
     "@angular/router": "~11.2.0",
-    "@capacitor/core": "2.4.7",
+    "@capacitor/android": "^3.0.0-rc.0",
+    "@capacitor/core": "^3.0.0-rc.0",
+    "@capacitor/filesystem": "^0.5.2",
     "@ionic/angular": "^5.5.2",
+    "loglevel": "^1.7.1",
     "rxjs": "~6.6.0",
     "tslib": "^2.0.0",
     "zone.js": "~0.10.2"
@@ -31,7 +37,7 @@
     "@angular/compiler": "~11.2.0",
     "@angular/compiler-cli": "~11.2.0",
     "@angular/language-service": "~11.2.0",
-    "@capacitor/cli": "2.4.7",
+    "@capacitor/cli": "^3.0.0-rc.0",
     "@ionic/angular-toolkit": "^3.1.0",
     "@types/jasmine": "~3.6.0",
     "@types/jasminewd2": "~2.0.3",
